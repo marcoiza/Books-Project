@@ -1,0 +1,11 @@
+CREATE A NETWORK IN DOCKER
+docker network create --subnet=192.168.0.0/24 our-carpool-nt
+
+CREATE MYSQL CONTAINER
+docker run -d --name=mysql-db -p 3307:3306 -e MYSQL_ROOT_PASSWORD=0936 --network=our-carpool-nt --ip 192.168.0.2 mysql
+
+CREATE STUDENT REGISTRATION IMAGE (OPTIONAL)
+docker build -t student-registration .
+
+CREATE STUDENT REGISTRATION CONTAINER
+docker run --rm -d -p 8080:8080 --name student-registration-s --network=our-carpool-nt --ip 192.168.0.3 kevin0936/student-registration
