@@ -4,8 +4,8 @@ try:
     db_client = mysql.connector.connect(
         host='localhost',
         port='3306',  # Puerto predeterminado de MySQL
-        user='user',
-        password='password',
+        user='root',
+        password='root',
         database='bookservice',  # Reemplaza con el nombre de tu base de datos
         charset='utf8'  # Opcional: Puedes especificar el conjunto de caracteres adecuado para tu aplicación
     )
