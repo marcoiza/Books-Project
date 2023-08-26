@@ -3,13 +3,6 @@
 /* Created on:     8/2/2023 12:41:45 AM                         */
 /*==============================================================*/
 
--- Eliminar restricciones de claves foráneas
-alter table TRANSACTION 
-   drop foreign key FK_TRANSACT_REFERENCE_TRANSACT;
-
-alter table TRANSACTION
-   drop foreign key FK_TRANSACT_REFERENCE_BOOK;
-
 -- Eliminar tablas si existen
 drop table if exists TRANSACTION;
 drop table if exists BOOK;
