@@ -2,7 +2,6 @@ from fastapi import APIRouter, HTTPException, status
 from config.database import db_client
 from models.transaction_type import TransactionType, Partial_TransactionType
 from schemas.transaction_type import transaction_type_schema, transactions_type_schema
-from bson import ObjectId
 import mysql.connector
 
 router = APIRouter(prefix="/transactions-type",
