@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: books-service-c
-          image: books-service:latest
-          imagePullPolicy: Never
+          image: marcoiza/books-service:v2
+          # imagePullPolicy: Never
           ports:
             - containerPort: 8000

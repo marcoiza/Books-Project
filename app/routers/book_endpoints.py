@@ -2,7 +2,6 @@ from fastapi import APIRouter, HTTPException, status
 from config.database import db_client
 from models.book import Book, Partial_Book
 from schemas.book import book_schema, books_schema
-from bson import ObjectId
 import mysql.connector
 
 router = APIRouter(prefix="/book",
