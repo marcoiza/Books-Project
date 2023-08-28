@@ -2,6 +2,7 @@ import mysql.connector
 
 try:
     db_client = mysql.connector.connect(
+        # host='mysql-db-s',
         host='localhost',
         port='3306',  # Puerto predeterminado de MySQL
         user='root',
